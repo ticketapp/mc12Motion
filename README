@@ -1,0 +1,28 @@
+
+"C:\Program Files\Adobe\Adobe After Effects CC 2019\Support Files\AfterFX" -r "C:\Users\user\Desktop\dev\mc12Motion\listLayers.jsx"
+Mieux : instaler le plugin adobe d'atom ajouter la path de after effect dans les settings et
+lancer le script avec ctrl alt r
+
+Devis :
+UI : 1j
+Select all comp: 1j
+Extract : 1j
+explications/retours : 1/2j
+
++ ajouter durée/difficulté/je sais plus quoi
+
+http://www.arturobracero.com/2018/05/05/how-to-import-json-files-in-after-effects-cc-2018-to-display-twitter-data/
+===========================================================
+https://stackoverflow.com/questions/26285164/get-read-text-file-from-url-javascript-for-after-effects
+===========================================================
+myPath = "/c/badpath/txt.txt";
+
+try{
+
+$.evalFile (myPath);
+
+}catch(err){
+
+"Not found."
+
+}
