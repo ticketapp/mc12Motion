@@ -35,6 +35,9 @@
         }
       }
     }
+
+    myFile.close();
+    f.close();
   }
 
   FindAndReplaceText(this);
