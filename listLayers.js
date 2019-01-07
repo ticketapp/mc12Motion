@@ -2,71 +2,88 @@
   //@include "./dict.js"
 
   function FindAndReplaceText(thisObj) {
-    var scriptName = "Find and Replace Text";
+    var scriptName = "Bruthor";
 
-    // var f = new File("log.txt")
-    // f.encoding = "UTF-8";
-    // f.open("w");
+    var f = new File("log.txt")
+    f.encoding = "UTF-8";
+    f.open("w");
 
-    var fileName = prompt("Please enter the file name");
+    var fileName = prompt("Please enter the file name without any dot");
+    // Rajouter l'export du français avant la trad
+    // rajouter dans le fichier dict.js
+    var renderQueue = app.project.renderQueue;
 
-    // app.beginUndoGroup("Replace All");
+    var duplicatedComp = null;
 
-    var compToExport = null;
-
-    // Rajouter une boucle sur la liste des langues
     var langList = ["en", "es", "de", "it"]
     var langIndex;
     for (langIndex = 0; langIndex < langList.length; langIndex++) {
 
+    f.writeln(  app.project.numItems)
+
       for (var i = 1; i <= app.project.numItems; i++) {
-        if (app.project.item(i) instanceof CompItem) {
-          var myComp = app.project.item(i);
 
-          if (myComp.name === '01_01_01_FR_04') {
-            compToExport = myComp;
-          }
 
-          var numberOfLayers = myComp.numLayers;
-          for (var j = 1; j <= numberOfLayers; j++) {
-            var sourceText = myComp.layer(j).sourceText;
-            if (sourceText != null) {
-              if (sourceText.numKeys == 0) {
-                //     // textValue is a TextDocument. Retrieve the string inside
-                var oldString = sourceText.value.text;
-                // f.writeln(oldString);
-                if (dict[oldString]) {
-                  var newString = replaceTextInString(oldString, oldString, dict[oldString][langIndex]);
-                  if (oldString != newString) {
-                    sourceText.setValue(newString);
-                  }
-                }
-              } else {
-                // Do it for each keyframe:
-                for (var keyIndex = 1; keyIndex <= sourceText.numKeys; keyIndex++) {
-                  // textValue is a TextDocument. Retrieve the string inside
-                  var oldString = sourceText.keyValue(keyIndex).text;
-                  // f.writeln(oldString);
-                  if (dict[oldString]) {
-                    var newString = replaceTextInString(oldString, oldString, dict[oldString][langIndex]);
-                    if (oldString != newString) {
-                      sourceText.setValueAtKey(keyIndex,newString);
-                    }
-                  }
+
+        var isMainComp = app.project.item(i) instanceof CompItem &&
+        app.project.item(i).name === '01_01_01_FR_04'
+
+
+        if (isMainComp) {
+          f.writeln(app.project.item(i).name)
+
+          var comp = app.project.item(i)
+
+          replaceTextInCompAndExport(comp, fileName, langList[langIndex]);
+        }
+      }
+    }
+
+    f.close();
+
+    function replaceTextInCompAndExport(comp, fileName, langName) {
+      var duplicatedComp = comp.duplicate();
+
+      var numberOfLayers = duplicatedComp.numLayers;
+      f.writeln(numberOfLayers)
+      for (var j = 1; j <= numberOfLayers; j++) {
+        var sourceText = duplicatedComp.layer(j).sourceText;
+        if (sourceText != null) {
+
+          f.writeln(sourceText)
+
+          if (sourceText.numKeys == 0) {
+            var oldString = sourceText.value.text;
+
+            if (dict[oldString]) {
+              var newString = replaceTextInString(oldString, oldString, dict[oldString][langIndex]);
+              f.writeln(dict[oldString][langIndex])
+              if (oldString != newString) {
+                sourceText.setValue(newString);
+              }
+            }
+          } else {
+            for (var keyIndex = 1; keyIndex <= sourceText.numKeys; keyIndex++) {
+              var oldString = sourceText.keyValue(keyIndex).text;
+
+              if (dict[oldString]) {
+                var newString = replaceTextInString(oldString, oldString, dict[oldString][langIndex]);
+                f.writeln(dict[oldString][langIndex])
+                if (oldString != newString) {
+                  sourceText.setValueAtKey(keyIndex,newString);
                 }
               }
             }
           }
         }
       }
-      // app.endUndoGroup();
-      // f.close();
-      alert(langList[langIndex])
-      var resultFile = new File(fileName + "_" + langList[langIndex])
-      var renderQueue = app.project.renderQueue;
-      var render = renderQueue.items.add(compToExport);
-      render.outputModules[1].file = resultFile;
-      renderQueue.queueInAME(false);
+
+      // var resultFile = new File(fileName + "_" + langList[langIndex])
+      // var render = renderQueue.items.add(duplicatedComp);
+      // render.outputModules[1].file = resultFile;
+      // renderQueue.queueInAME(false);
+
+      duplicatedComp.name = "duplicatedComp_" + langName;
     }
 
     function replaceTextInString(totalString, findString, replaceString) {
@@ -78,3 +95,11 @@
 
   FindAndReplaceText(this);
 }
+// function exportComp(duplicatedComp, fileName, langName) {
+//   var resultFile = new File(fileName + "_" + langList[langIndex])
+//   var render = renderQueue.items.add(duplicatedComp);
+//   render.outputModules[1].file = resultFile;
+//   renderQueue.queueInAME(false);
+//
+//   duplicatedComp.name = "duplicatedComp_" + langName;
+// }

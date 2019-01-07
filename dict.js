@@ -248,3 +248,7 @@ dict["Extracteur de rotule axiale"] = ["Tie rod end wrench removal tool", "Extra
 dict["Correcteur blanc"] = ["Correction fluid", "Corrector líquido", "Korrekturflüssigkeit", "Bianchetto"]
 dict["Ficelle"] = ["Piece of string", "Trozo de cuerda", "Schnur", "Spago "]
 dict["Repousse-piston"] = ["Brake caliper windback tool", "Resetter de pistón", "Bremskolbenrücksteller", "Ripristino pistone del freno"]
+// Durée	Duration	Duración	Dauer	Durata
+// Économie moyenne	Average savings	Ahorro medio	Durchschnittliche Einsparungen	Risparmio medio
+// Difficulté	Difficulty	Dificultad	Schwierigkeitsgrad	Difficoltà
+// Etape	Step	Etapa	Schritt	Tappa
