@@ -1,6 +1,96 @@
-239
-01_01_01_FR_04
-1
-239
-239
-239
+========================
+Putting the vehicle back in place,Volver a colocar el vehículo,Das Fahrzeug zurückstellen,Rimettere a posto il veicolo
+========================
+Putting the vehicle back in place=Volver a colocar el vehículo,Das Fahrzeug zurückstellen,Rimettere a posto il veicolo
+========================
+Changing the brake pads,Cambiar las pastillas,Die Bremsbeläge wechseln,Cambiare le pastiglie
+========================
+Changing the brake pads=Cambiar las pastillas,Die Bremsbeläge wechseln,Cambiare le pastiglie
+========================
+10mm Spanner,Llave plana del 10,10er Maulschlüssel,Chiave inglese da 10
+========================
+10mm Spanner=Llave plana del 10,10er Maulschlüssel,Chiave inglese da 10
+========================
+13mm Socket,Casquillo del 13,13 mm Steckschlüsseleinsatz,Bussola da 13
+========================
+13mm Socket=Casquillo del 13,13 mm Steckschlüsseleinsatz,Bussola da 13
+========================
+Wooden peg,Taco de madera,Holzblock,Zeppa di legno
+========================
+Wooden peg=Taco de madera,Holzblock,Zeppa di legno
+========================
+Axle stand,Borriqueta,Unterstellbock,Cavalletto
+========================
+Axle stand=Borriqueta,Unterstellbock,Cavalletto
+========================
+Volver a colocar el vehículo,Das Fahrzeug zurückstellen,Rimettere a posto il veicolo
+========================
+Volver a colocar el vehículo=Das Fahrzeug zurückstellen,Rimettere a posto il veicolo
+========================
+Cambiar las pastillas,Die Bremsbeläge wechseln,Cambiare le pastiglie
+========================
+Cambiar las pastillas=Die Bremsbeläge wechseln,Cambiare le pastiglie
+========================
+Llave plana del 10,10er Maulschlüssel,Chiave inglese da 10
+========================
+Llave plana del 10=10er Maulschlüssel,Chiave inglese da 10
+========================
+Casquillo del 13,13 mm Steckschlüsseleinsatz,Bussola da 13
+========================
+Casquillo del 13=13 mm Steckschlüsseleinsatz,Bussola da 13
+========================
+Taco de madera,Holzblock,Zeppa di legno
+========================
+Taco de madera=Holzblock,Zeppa di legno
+========================
+Borriqueta,Unterstellbock,Cavalletto
+========================
+Borriqueta=Unterstellbock,Cavalletto
+========================
+Das Fahrzeug zurückstellen,Rimettere a posto il veicolo
+========================
+Das Fahrzeug zurückstellen=Rimettere a posto il veicolo
+========================
+Die Bremsbeläge wechseln,Cambiare le pastiglie
+========================
+Die Bremsbeläge wechseln=Cambiare le pastiglie
+========================
+10er Maulschlüssel,Chiave inglese da 10
+========================
+10er Maulschlüssel=Chiave inglese da 10
+========================
+13 mm Steckschlüsseleinsatz,Bussola da 13
+========================
+13 mm Steckschlüsseleinsatz=Bussola da 13
+========================
+Holzblock,Zeppa di legno
+========================
+Holzblock=Zeppa di legno
+========================
+Unterstellbock,Cavalletto
+========================
+Unterstellbock=Cavalletto
+========================
+Rimettere a posto il veicolo
+========================
+Rimettere a posto il veicolo=
+========================
+Cambiare le pastiglie
+========================
+Cambiare le pastiglie=
+========================
+Chiave inglese da 10
+========================
+Chiave inglese da 10=
+========================
+Bussola da 13
+========================
+Bussola da 13=
+========================
+Zeppa di legno
+========================
+Zeppa di legno=
+========================
+Cavalletto
+========================
+Cavalletto=
